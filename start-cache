@@ -1,0 +1,13 @@
+#!/bin/bash
+
+: ${CACHE_TYPE:=default}
+if [ ! -f /etc/nginx/vhosts/lancache-${CACHE_TYPE}.conf ]; then
+	echo "Cannot locate vhost '${CACHE_TYPE}'" >&2
+	exit 1
+fi
+
+echo " -- Starting ${CACHE_TYPE} cache server -- " >&2
+
+sed -ri"" "s/include vhosts[^;]*;/include vhosts\/lancache-${CACHE_TYPE}.conf;/" /etc/nginx/nginx.conf
+
+exec nginx
