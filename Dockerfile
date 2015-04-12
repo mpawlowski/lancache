@@ -10,6 +10,7 @@ ADD nginx/ /etc/nginx
 RUN yum install -y bind bind-utils
 ADD bind/named.conf /etc/named.conf
 ADD bind/named/	/etc/named	
+RUN sed -i "s/REPLACED/`echo $HOST_ADDRESS`/" /etc/named/*.zone
 EXPOSE 53/udp
 
 # create cache directories
@@ -17,4 +18,5 @@ RUN mkdir -p /srv/www/cache/installs
 RUN mkdir -p /srv/www/cache/other
 RUN mkdir -p /srv/www/cache/tmp
 
+# copy the start script
 ADD scripts/start-cache  /usr/local/bin/start-cache
