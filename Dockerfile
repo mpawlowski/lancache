@@ -1,7 +1,7 @@
 FROM centos:7
 
 # move scripts
-ADD scripts/ /usr/local/bin/
+ADD scripts/ /usr/local/bin
 
 # get and configure the latest nginx
 ADD nginx/nginx.repo /etc/yum.repos.d/nginx.repo
