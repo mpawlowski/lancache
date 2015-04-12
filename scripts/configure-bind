@@ -1,0 +1,5 @@
+#!/bin/bash
+
+IP4=`/sbin/ifconfig eth1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
+
+sed -i "s/HOST_ADDRESS/$IP4" /etc/named/lancache.net.zone
