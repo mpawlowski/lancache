@@ -1,5 +1,3 @@
 #!/bin/bash
 
-touch ~/host
-echo `ip addr | grep inet | grep eth1 | awk '{print $2}' | sed 's/\/.*$//'` > ~/host
-sed -i "s/HOST_ADDRESS/FOO/" /etc/named/lancache.net.zone
+exec sed -i "s/HOST_ADDRESS/FOO/" /etc/named/lancache.net.zone
