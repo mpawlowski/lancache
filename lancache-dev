@@ -7,5 +7,5 @@ then
 fi
 
 docker build . 
-docker run --net="host" -e HOST_ADDR=192.168.2.135 -it mpawlowski/lancache
+docker run --net="host" -it mpawlowski/lancache
 
