@@ -1,7 +1,7 @@
 FROM centos:7
 
 # move scripts
-ADD scripts/configure-bind /usr/local/bin/configure-bind
+ADD scripts/ /usr/local/bin/
 
 # get the latest net-tools
 RUN yum install -y net-tools
