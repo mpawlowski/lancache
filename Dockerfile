@@ -12,4 +12,6 @@ RUN mkdir -p /srv/www/cache/installs
 RUN mkdir -p /srv/www/cache/other
 RUN mkdir -p /srv/www/cache/tmp
 
+ADD start-cache  /usr/local/bin/start-cache
+
 
