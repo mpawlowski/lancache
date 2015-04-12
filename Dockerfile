@@ -14,7 +14,7 @@ RUN yum install -y bind bind-utils
 ADD bind/named.conf /etc/named.conf
 ADD bind/named/	/etc/named	
 EXPOSE 53/udp
-RUN /user/local/bin/configure-bind
+RUN /usr/local/bin/configure-bind
 
 # create cache directories
 RUN mkdir -p /srv/www/cache/installs
