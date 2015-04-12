@@ -10,4 +10,4 @@ echo " -- Starting ${CACHE_TYPE} cache server -- " >&2
 
 sed -ri"" "s/include vhosts[^;]*;/include vhosts\/lancache-${CACHE_TYPE}.conf;/" /etc/nginx/nginx.conf
 
-exec nginx
+exec nginx &
