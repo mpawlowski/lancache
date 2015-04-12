@@ -11,7 +11,7 @@ RUN yum install -y bind bind-utils
 ADD bind/named.conf /etc/named.conf
 ADD bind/named/	/etc/named	
 RUN echo $HOST_ADDRESS > ~/host
-RUN sed -i "s/HOST_ADDRESS/$HOST_ADDRESS/" /etc/named/lancache.net.zone
+CMD [ "sed -i \"s/HOST_ADDRESS/$HOST_ADDRESS/\" /etc/named/lancache.net.zone" ]
 EXPOSE 53/udp
 
 # create cache directories
