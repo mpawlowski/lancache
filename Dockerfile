@@ -10,6 +10,7 @@ ADD nginx/ /etc/nginx
 RUN yum install -y bind bind-utils
 ADD bind/named.conf /etc/named.conf
 ADD bind/named/	/etc/named	
+EXPOSE 53/udp
 
 # create cache directories
 RUN mkdir -p /srv/www/cache/installs
@@ -17,5 +18,3 @@ RUN mkdir -p /srv/www/cache/other
 RUN mkdir -p /srv/www/cache/tmp
 
 ADD scripts/start-cache  /usr/local/bin/start-cache
-
-

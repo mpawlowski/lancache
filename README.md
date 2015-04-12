@@ -1,5 +1,4 @@
 #lancache
-========
 
 Game Update Caching for LAN Parties
 
