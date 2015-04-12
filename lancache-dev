@@ -6,6 +6,6 @@ then
 	exit 1
 fi
 
-docker build --no-cache=true . 
+docker build . 
 docker run --net="host" -e HOST_ADDR=192.168.2.135 -it mpawlowski/lancache
 

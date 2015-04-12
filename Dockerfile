@@ -22,6 +22,6 @@ RUN mkdir -p /srv/www/cache/tmp
 
 # move scripts
 ADD scripts/configure-bind /usr/local/bin/configure-bind
-RUN /usr/local/bin/configure-bind
+CMD ["/usr/local/bin/configure-bind"]
 
 
