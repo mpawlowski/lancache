@@ -3,6 +3,9 @@ FROM centos:7
 # move scripts
 ADD scripts/ /usr/local/bin
 
+# get the latest net-tools
+RUN tum install -y net-tools
+
 # get and configure the latest nginx
 ADD nginx/nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum install -y nginx
