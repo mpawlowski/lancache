@@ -1,3 +1,5 @@
 #!/bin/bash
-/sbin/ifconfig eth1 | grep inet | head -1 | awk '{print $2}' > ~/host
-sed -i "s/HOST_ADDRESS/$IP4/" /etc/named/lancache.net.zone
+
+touch ~/host
+echo `ip addr | grep inet | grep eth1 | awk '{print $2}' | sed 's/\/.*$//'` > ~/host
+sed -i "s/HOST_ADDRESS/FOO/" /etc/named/lancache.net.zone
