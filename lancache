@@ -7,5 +7,5 @@ then
 fi
 
 docker pull mpawlowski/lancache
-docker run --net="host" -it mpawlowski/lancache
+docker --iptables=true run --net="host" -it mpawlowski/lancache
 

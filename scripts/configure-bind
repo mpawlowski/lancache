@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec sed -i "s/HOST_ADDRESS/192.168.2.135/" /etc/named/lancache.net.zone
