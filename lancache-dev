@@ -6,6 +6,6 @@ then
 	exit 1
 fi
 
-docker build .
+docker build . 
 docker run --net="host" -it mpawlowski/lancache
 
