@@ -13,3 +13,7 @@ Initially pulled from http://blog.multiplay.co.uk/2014/04/lancache-dynamically-c
         -p 80:80 \
         -v /srv/www/cache:/tmp/cache \
         lancache;
+
+#2. DNSMasq Entries
+
+    address=/.cs.steampowered.com/<ip-address>
