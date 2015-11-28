@@ -8,4 +8,8 @@ Initially pulled from http://blog.multiplay.co.uk/2014/04/lancache-dynamically-c
 
 	git clone git@github.com:mpawlowski/lancache.git
 	cd lancache/
-	./lancache.sh
+	docker build -t lancache
+	docker run \
+        -p 80:80 \
+        -v /srv/www/cache:/tmp/cache \
+        lancache;
